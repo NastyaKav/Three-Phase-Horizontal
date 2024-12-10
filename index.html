@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-phase horizontal separator size calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Three-phase horizontal separator size calculator    </h1>
+    <form id="calculator-form1">
+      <script src="script.js"></script>
+        <label for="qo">Enter Qo - oil flow rate:</label>
+        <input type="number" id="qo" name="qo" >
+        <br><br>
+        <label for="qw">Enter Qw - water flow rate:</label>
+        <input type="number" id="qw" name="qw" >
+        <br><br>
+        <label for="tro">Enter tr(o) - retention time of oil:</label>
+        <input type="number" id="tro" name="tro" >
+        <br><br>
+        <label for="trw">Enter tr(w) - retention time of water:</label>
+        <input type="number" id="trw" name="trw" >
+        <br><br>
+        <button type="button" id="calculate-btn1">Calculate Aw/A:</button>
+        <h2>Result: <span id="result1">0</span></h2>
+    </form>
+
+ 
+ 
+
+    <img src="aw.png" />
+
+
+    <form id="calculator-form">
+      <script src="script2.js"></script>
+      <label for="b">Enter ẞ:</label>
+      <input type="number" id="b" name="b" >
+      <br><br>
+      <label for="qo">Enter Qo - oil flow rate:</label>
+      <input type="number" id="qo" name="qo" >
+      <br><br>
+      <label for="qw">Enter Qw - water flow rate:</label>
+      <input type="number" id="qw" name="qw" >
+      <br><br>
+      <label for="tro">Enter tr(o) - retention time of oil:</label>
+      <input type="number" id="tro" name="tro" >
+      <br><br>
+      <label for="trw">Enter tr(w) - retention time of water:</label>
+      <input type="number" id="trw" name="trw" >
+      <br><br>
+      <h1>CDi = 0.34</h1>
+      <label for="qg">Enter Qg - gas flow rate:</label>
+      <input type="number" id="qg" name="qg" >
+      <br><br>
+      <label for="po">Enter Po - operating pressure:</label>
+      <input type="number" id="po" name="po" >
+      <br><br>
+      <label for="to">Enter To - operating temrepature:</label>
+      <input type="number" id="to" name="to" >
+      <br><br>
+      <label for="sg">Enter Sg - specific gravity:</label>
+      <input type="number" id="sg" name="sg" >
+      <br><br>
+      <label for="sgo">Enter SG o - specific gravity of oil:</label>
+      <input type="number" id="sgo" name="sgo" >
+      <br><br>
+      <label for="sgw">Enter SG w - specific gravity of water:</label>
+      <input type="number" id="sgw" name="sgw" >
+      <br><br>
+      <label for="mo">Enter µ(o) - viscosity of oil:</label>
+      <input type="number" id="mo" name="mo" >
+      <br><br>
+      <label for="mw">Enter µ(w) - viscosity of water:</label>
+      <input type="number" id="mw" name="mw" >
+      <br><br>
+      <label for="dml">Enter dm(l) - liquid droplet size removal:</label>
+      <input type="number" id="dml" name="dml" >
+      <br><br>
+      <label for="dmw">Enter dm(w) - water droplet size removal:</label>
+      <input type="number" id="dmw" name="dmw" >
+      <br><br>
+      <label for="dmo">Enter dm(o) - oil droplet size removal:</label>
+      <input type="number" id="dmo" name="dmo" >
+      <br><br>
+      <img src="1.png" />
+      <br><br>
+      <label for="z">Enter z - compressibility factor:</label>
+      <input type="number" id="z" name="z" >
+      <br><br>
+      <img src="2.png" />
+        <br><br>
+        <label for="m">Enter µ - viscosity:</label>
+        <input type="number" id="m" name="m" >
+        <br><br>
+      <table id="results-table">
+          <thead>
+            <tr>
+              <th>d(in.)</th>
+              <th>Leff gas(ft)</th>
+              <th>Leff liquid(ft)</th>
+              <th>Lss gas(ft)</th>
+              <th>Lss liquid(ft)</th>
+              <th>Sr gas</th>
+              <th>Sr liquid</th>
+            </tr>
+            <tr>
+              <th>60</th>
+              <th id="leffg60"></th>
+              <th id="leffl60"></th>
+              <th id="lssg60"></th>
+              <th id="lssl60"></th>
+              <th id="srg60"></th>
+              <th id="srl60"></th>
+
+            </tr>
+            <tr>
+              <th>72</th>
+              <th id="leffg72"></th>
+              <th id="leffl72"></th>
+              <th id="lssg72"></th>
+              <th id="lssl72"></th>
+              <th id="srg72"></th>
+              <th id="srl72"></th>
+            </tr>
+            <tr>
+              <th>84</th>
+              <th id="leffg84"></th>
+              <th id="leffl84"></th>
+              <th id="lssg84"></th>
+              <th id="lssl84"></th>
+              <th id="srg84"></th>
+              <th id="srl84"></th>
+            </tr>
+            <tr>
+              <th>96</th>
+              <th id="leffg96"></th>
+              <th id="leffl96"></th>
+              <th id="lssg96"></th>
+              <th id="lssl96"></th>
+              <th id="srg96"></th>
+              <th id="srl96"></th>
+            </tr>
+            <tr>
+              <th>108</th>
+              <th id="leffg108"></th>
+              <th id="leffl108"></th>
+              <th id="lssg108"></th>
+              <th id="lssl108"></th>
+              <th id="srg108"></th>
+              <th id="srl108"></th>
+            </tr>
+          </tr>
+          </thead>
+        </table>
+
+      <button type="button" id="calculate-btn2">Calculate</button>
+      <h1>It is recommended that you choose a diameter that corresponds to a Slenderness ratio value between 3 and 5.</h1>
+      <h2>Gas capacity constraint: <span id="resultg">0</span></h2>
+      <h2>Liquid capacity constraint: <span id="resultl">0</span></h2>
+  </form>
+</body>
+</html> 
